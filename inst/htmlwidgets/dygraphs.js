@@ -787,3 +787,22 @@ HTMLWidgets.widget({
   
 });
 
+
+
+/* ####################################################################################### */
+/* ###                               BEGIN FORKED CODE                                 ### */
+/* ####################################################################################### */
+window.d3format = window.d3format || {};
+const formatters = 
+    window.d3format._formatters = {};
+
+/** Lazily instantiate (or get an existing) instance of a d3 formatter for a particular format string */
+window.d3format.getOrCreate = (formatStr) => {
+    if (! formatters[formatStr]) {
+        formatters[formatStr] = d3.format(formatStr);
+    }
+    return formatters[formatStr];
+};
+/* ####################################################################################### */
+/* ###                                END FORKED CODE                                  ### */
+/* ####################################################################################### */

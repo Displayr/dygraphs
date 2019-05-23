@@ -15,7 +15,7 @@ The dygraphs package is an R interface to the [dygraphs](http://dygraphs.com) Ja
 The dygraphs package depends on the development version of the [htmlwidgets](https://github.com/ramnathv/htmlwidgets) package so you need to install both packages. You can do this using the **devtools** package as follows:
 
 ```S
-devtools::install_github(c("ramnathv/htmlwidgets", "rstudio/dygraphs"))
+devtools::install_github(c("Displayr/htmlwidgets", "Displayr/dygraphs"))
 ```
 
 #### Usage
@@ -37,7 +37,18 @@ dygraph(nhtemp, main = "New Haven Temperatures") %>%
 
 See the [online documentation](http://rstudio.github.io/dygraphs) for the dygraphs package for additional details and examples.
 
+#### Displayr extensions
+This fork extends the dygraphs package by adding d3.format for use as a value formatter. This is intended to be used with the `xxxFormatter` parameters of the dyAxis function:
 
+```S
+dyGraph(nhtemp, main = "New Haven Temperatures") %>%
+  dyAxis("y", 
+         label = "Temp (F)", 
+         valueRange = c(40, 60),
+         valueFormatter = d3formatFn(".3f"),
+         axisLabelFormatter = d3formatFn(".0f")
+  )
+```
 
 
 
