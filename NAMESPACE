@@ -3,6 +3,7 @@
 export("%>%")
 export(as.yearmon)
 export(as.yearqtr)
+export(d3formatFn)
 export(dyAnnotation)
 export(dyAxis)
 export(dyBarChart)
