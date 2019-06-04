@@ -10,9 +10,12 @@
 #' @keywords d3.format javascript
 #' @export
 #' @examples
-#' d3format(".3f") # return a javascript string which will give you a function that formats values in fixed format with 3 decimal points
-#' d3format("e")   # return a javascript string that will give you a function that formats values in engineering format
-#' d3format(".3f", "val") # return a javascript string that will reuse the fixed formatter instantiated in the earlier example, with a param name 'val'
+#' d3formatFn(".3f") # return a javascript string which will give you a function that 
+#'                   # formats values in fixed format with 3 decimal points
+#' d3formatFn("e")   # return a javascript string that will give you a function that 
+#'                   # formats values in engineering format
+#' d3formatFn(".3f", "val") # return a javascript string that will reuse the fixed formatter 
+#'                          # instantiated in the earlier example, with a param name 'val'
 #' 
 
 d3formatFn <- function(formatStr, paramName = "value") {
