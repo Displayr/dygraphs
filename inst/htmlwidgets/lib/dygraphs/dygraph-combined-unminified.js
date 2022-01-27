@@ -1533,6 +1533,8 @@ var DygraphOptions = (function () {
                     for (var r = 0; r < this.layout_.points.length; ++r) {
                         var n = this.layout_.points[r],
                             o = t - this.getLeftBoundary_(r);
+                        console.log(n);
+                        console.log(o);
                         if (o < n.length && n[o].idx == t) {
                             var s = n[o];
                             null !== s.yval && this.selPoints_.push(s);
