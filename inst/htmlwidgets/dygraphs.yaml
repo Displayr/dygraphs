@@ -7,7 +7,7 @@ dependencies:
     version: 1.1.1
     src: "htmlwidgets/lib/dygraphs"
     script:
-      - dygraph-combined-unminified.js
+      - dygraph-combined.js
       - shapes.js
     stylesheet: dygraph.css
   - name: moment
