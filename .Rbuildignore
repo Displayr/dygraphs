@@ -4,3 +4,5 @@ README.md
 examples/.*_files
 docs/
 
+^AGENTS\.md$
+^CLAUDE\.md$
